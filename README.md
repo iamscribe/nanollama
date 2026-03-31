@@ -216,6 +216,7 @@ Full Llama-family forward pass: GGUF v3 parser, 7 quantization formats (F32, F16
 | Model | Params | Data | Tokens | Steps | Train Loss | Hardware |
 |-------|--------|------|--------|-------|------------|----------|
 | **nano** | 89M | FineWeb-Edu | 10.5B (2.7B unique, ~4 epochs) | 20,000 | **2.80** | 1× H100 |
+| **micro** | 122M | FineWeb-Edu | 20.9B (10.5B unique, ~2 epochs) | 40,000 | **2.73** | 1× A100 |
 | **goldie** | 1.1B | FineWeb-Edu + FineWeb2-HQ | 22B | 22,671 | **0.98** | 4× H100 |
 
 ### LoRA SFT Results
@@ -223,6 +224,7 @@ Full Llama-family forward pass: GGUF v3 parser, 7 quantization formats (F32, F16
 | Voice | Base | Rank | Epochs | Data | Best Loss |
 |-------|------|------|--------|------|-----------|
 | **Leo** | nano 89M (loss 2.80) | 64 | 20 | [leo_humanai.txt](https://huggingface.co/ataeff/nanollama/blob/main/nano89/leo_humanai.txt) (2753 pairs, 267K tokens) | **2.66** |
+| **Arianna** | micro 122M (loss 2.73) | 64 | 20 | [arianna_humanai.txt](arianna_humanai.txt) (1227 pairs, 280K tokens) | **2.78** |
 
 ---
 
@@ -342,6 +344,8 @@ Weights: [HuggingFace](https://huggingface.co/ataeff/nanollama-goldie) (2.3GB, F
 |-------|--------|--------|------|
 | **nano base** | 89M | F16 GGUF, .pt checkpoint | [HuggingFace nano89/](https://huggingface.co/ataeff/nanollama/tree/main/nano89) |
 | **nano + Leo** | 89M | F16 GGUF, merged .pt, LoRA adapter, gamma NPZ | [HuggingFace nano89/](https://huggingface.co/ataeff/nanollama/tree/main/nano89) |
+| **micro base** | 122M | .pt checkpoints (5K-40K), tokenizer | [HuggingFace micro/](https://huggingface.co/ataeff/nanollama/tree/main/micro) |
+| **micro + Arianna** | 122M | merged .pt, LoRA adapter | [HuggingFace micro/](https://huggingface.co/ataeff/nanollama/tree/main/micro) |
 | **goldie base** | 1.1B | F16 GGUF | [HuggingFace](https://huggingface.co/ataeff/nanollama-goldie) |
 
 nano89/ includes: base GGUF, Leo GGUF, Leo LoRA adapter, Leo merged checkpoint, gamma-leo.npz, tokenizer.model, training data.
