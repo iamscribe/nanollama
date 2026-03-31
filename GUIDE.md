@@ -34,7 +34,7 @@ You do NOT need to know Python. You do not need to understand machine learning. 
 ## GPU glossary (read this once)
 
 - **GPU** — Graphics Processing Unit. Originally made for video games, now the main hardware for training AI. Much faster than a regular CPU for matrix math.
-- **LLM** — Large Language Model. The type of AI behind ChatGPT, Gemini, etc. nanollama trains a smaller version of this.
+- **LLM** — Large Language Model. The type of AI behind ChatGPT, Claude, etc. nanollama trains a smaller version of this.
 - **GGUF** — A file format for storing trained language models. Think of it like .mp3 for audio: it is a container that holds the model's learned weights in a portable, compressed form.
 - **H100** — NVIDIA's current high-end GPU. Lambda Cloud rents these by the hour. One H100 is enough for nano, micro, mini, and small.
 - **A100** — Previous generation NVIDIA GPU. Should work but we haven't tested it. If you try, let us know.
