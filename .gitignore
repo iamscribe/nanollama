@@ -75,3 +75,4 @@ weights/*.gguf
 weights/*.pt
 weights/*.npz
 weights/*.model
+arianna_humanai.txt
